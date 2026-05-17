@@ -1,0 +1,295 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 70px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s;
+
+    z-index: 1000;
+}
+
+/* Navbar After Scroll */
+
+nav.scrolled {
+    background: black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+
+.logo {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+/* List Items */
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+/* Anchor Tags */
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+/* Hover Color */
+
+.nav-links a:hover {
+    color: #00ffff;
+}
+
+/* Underline Animation */
+
+.nav-links a::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 0%;
+
+    height: 2px;
+
+    left: 0;
+
+    bottom: -5px;
+
+    background: #00ffff;
+
+    transition: 0.4s;
+}
+
+/* Hover Underline */
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+
+.hero {
+
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+
+        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 20px;
+}
+
+/* Hero Content Animation */
+
+.hero-content {
+    animation: fadeIn 2s ease;
+}
+
+/* Hero Heading */
+
+.hero h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+/* Hero Paragraph */
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+
+button {
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #00ffff;
+
+    color: black;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+/* Button Hover */
+
+button:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0px 0px 20px #00ffff;
+}
+
+/* Extra Sections */
+
+.extra-section {
+
+    height: 100vh;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* Section Heading */
+
+.extra-section h2 {
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+    color: #00ffff;
+}
+
+/* Section Paragraph */
+
+.extra-section p {
+
+    font-size: 22px;
+
+    max-width: 800px;
+
+    line-height: 1.8;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+@media(max-width:768px) {
+
+    nav {
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .nav-links {
+
+        margin-top: 15px;
+    }
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+    .hero p {
+
+        font-size: 18px;
+    }
+
+    .extra-section h2 {
+
+        font-size: 40px;
+    }
+
+    .extra-section p {
+
+        font-size: 18px;
+    }
+}
